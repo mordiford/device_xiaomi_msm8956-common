@@ -69,6 +69,9 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
+# A-7.1.2 "Battery Usage Alerts" feature-apk from OpenGapps
+priv-app/Turbo/Turbo.apk
+
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
