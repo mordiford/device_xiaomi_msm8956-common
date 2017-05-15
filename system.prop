@@ -72,7 +72,6 @@ ro.sys.display.support=63
 
 # Fingerprint
 ro.hardware.fingerprint=fpc
-ro.sys.display.support=63
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/config
