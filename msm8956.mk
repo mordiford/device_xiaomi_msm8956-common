@@ -122,7 +122,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8952 \
     memtrack.msm8952 \
     liboverlay
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calib.cfg:system/etc/calib.cfg
 
@@ -227,10 +227,6 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.msm8952
-
-# qti-telephony
-PRODUCT_PACKAGES += \
-    qti-telephony-common
 
 # Qualcomm dependencies
 PRODUCT_PACKAGES += \
