@@ -1,0 +1,42 @@
+#!/system/bin/sh
+
+# Load/unload/configure core_ctl
+# Configure governor
+
+. /system/etc/cpu/cpu.conf
+
+# Settings -> core_ctl -> ON 
+if [ "$1" == "core_ctl" ]; then
+    if [ $(getprop persist.sys.cpu.core_ctl) == "1" ]; then
+        # Load core_ctl module
+        if /system/bin/insmod /system/lib/modules/core_ctl.ko; then
+                echo "Starting core_ctl... Started."
+        else
+                echo "core_ctl is already running..."
+        fi
+        # Configure core_ctl
+        core_ctl
+    fi
+elif [ "$1" == "online" ]; then
+    # Unload core_ctl module
+    if /system/bin/rmmod core_ctl; then
+        echo "Stopping core_ctl... Stopped."
+     else
+        echo "core_ctl is already stopped..."
+    fi
+    # Bring up all cores online
+    online
+elif [ "$1" == "governor" ]; then
+    # Configure governor
+    governor
+elif [ "$1" == "apply" ]; then
+    # Apply new governor and/or core_ctl configurations
+    governor
+    core_ctl
+    echo "New CPU configuration applied..."
+else
+    echo "usage: cpu_config core_ctl -> load and configure core_ctl module if enabled"
+    echo "       cpu_config online -> unload module and bring all cores online"
+    echo "       cpu_config governor -> configure governor"
+    echo "       cpu_config apply -> apply new governor and/or core_ctl configurations"
+fi

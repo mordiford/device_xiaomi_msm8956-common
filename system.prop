@@ -171,6 +171,3 @@ persist.charging.notify=1
 
 # Wireless and USB ADB debug notification: 0-disable, 1-enable
 persist.adb.notify=0
-
-# Load core_ctl at boot(see /system/etc/init.core.ctl.sh): 1-enable, 0-disable, restart
-sys.cpu.core_ctl=0

@@ -1,0 +1,3 @@
+allow system_app su_exec:file execute;
+allow system_app su_exec:file { open read };
+allow system_app su_exec:file { execute_no_trans getattr open read };
