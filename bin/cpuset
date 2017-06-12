@@ -10,9 +10,9 @@ if [ "$1" == "core_ctl" ]; then
     if [ $(getprop persist.sys.cpu.core_ctl) == "1" ]; then
         # Load core_ctl module
         if /system/bin/insmod /system/lib/modules/core_ctl.ko; then
-                echo "Starting core_ctl... Started."
+            echo "Starting core_ctl... Started."
         else
-                echo "core_ctl is already running..."
+            echo "core_ctl is already running..."
         fi
         # Configure core_ctl
         core_ctl
@@ -35,8 +35,8 @@ elif [ "$1" == "apply" ]; then
     core_ctl
     echo "New CPU configuration applied..."
 else
-    echo "usage: cpu_config core_ctl -> load and configure core_ctl module if enabled"
-    echo "       cpu_config online -> unload module and bring all cores online"
-    echo "       cpu_config governor -> configure governor"
-    echo "       cpu_config apply -> apply new governor and/or core_ctl configurations"
+    echo "usage: cpuset core_ctl -> load and configure core_ctl module if enabled"
+    echo "       cpuset online -> unload module and bring all cores online"
+    echo "       cpuset governor -> configure governor"
+    echo "       cpuset apply -> apply new governor and/or core_ctl configurations"
 fi

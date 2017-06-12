@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
 
 # CPU configuration
 PRODUCT_PACKAGES += \
-    cpu_config
+    cpuset
 
 # DataServices
 PRODUCT_PACKAGES += \
