@@ -202,7 +202,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 # RIL
 PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
-BOARD_PROVIDES_LIBRIL := true
+BOARD_RIL_CLASS := ../../../$(VENDOR_PATH)/ril
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
