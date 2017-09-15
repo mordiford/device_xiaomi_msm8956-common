@@ -1,4 +1,5 @@
 # Audio
+audio.offload.disable=1
 af.fast_track_multiplier=1
 audio_hal.period_size=480
 audio.deep_buffer.media=true
@@ -30,7 +31,7 @@ persist.audio.fluence.voicerec=false
 voice.voip.conc.disabled=false
 use.qti.sw.alac.decoder=true
 use.qti.sw.ape.decoder=true
-
+persist.bt.enableAptXHD=true
 audio.safemedia.bypass=true
 
 # Bluetooth
@@ -175,3 +176,9 @@ persist.charging.notify=1
 
 # Wireless and USB ADB debug notification: 0-disable, 1-enable
 persist.adb.notify=0
+
+# SIM 2 default ringtone
+ro.config.ringtone_2=Ring_Digital_02.ogg
+
+# OTA check url
+cm.updater.uri=https://androidfilehost.com/api/?action=folder&flid=176641
