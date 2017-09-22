@@ -1,5 +1,3 @@
 allow init debugfs:file write;
-allow init displayfeature_exec:file { getattr execute open read };
-allow init displayfeature:process { rlimitinh siginh transition };
 allow init mmbn-daemon_exec:file { getattr execute open read };
 allow init mmbn-daemon:process { rlimitinh siginh transition };
